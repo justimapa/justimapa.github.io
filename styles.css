@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body styling */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #121212;
+    color: #E0E0E0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}/* Header Styling */
+header {
+    background-color: #1A1A1A; /* Keep a dark background for contrast */
+    color: #E0E0E0; /* Light grey color for text, softer than the bright blue */
+    padding: 20px 0; /* Reduced padding for a more compact look */
+    text-align: center;
+    box-shadow: none; /* Remove the box-shadow for a cleaner look */
+}
+
+/* Title and Job Title Styling */
+header h1 {
+    font-size: 2.5rem; /* Smaller font size for a more subtle appearance */
+    font-weight: normal; /* Use normal weight instead of bold for a softer look */
+    color: #E0E0E0; /* Match the light grey text color */
+    margin-bottom: 10px; /* Less space between name and job title */
+}
+
+header h2 {
+    font-size: 1.4rem; /* Smaller size for job title */
+    color: #A0A0A0; /* Slightly darker grey to differentiate it from the title */
+    font-weight: 300; /* Lighter weight for a more delicate feel */
+    margin-top: 5px; /* Reduce the margin above the job title */
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin-top: 10px; /* Reduced margin for closer proximity */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px; /* Reduced spacing between nav items */
+}
+
+nav ul li a {
+    color: #E0E0E0; /* Light grey text for a soft look */
+    text-decoration: none;
+    font-size: 1.1em; /* Slightly smaller font size for a less bold appearance */
+    letter-spacing: 1px; /* Subtle letter spacing */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #A0A0A0; /* Subtle hover effect with a slight grey change */
+    text-decoration: underline; /* Underline on hover for a more refined interaction */
+}
+
+/* Hero Section Styling (unchanged) */
+.hero {
+    position: relative;
+    background: url('your-background-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+    padding: 0 20px;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.cta-button {
+    font-size: 1.4rem;
+    color: white;
+    background-color: #00ADEF;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #1DA1F2;
+    transform: translateY(-5px);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Section Styles */
+section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #1A1A1A;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #00ADEF; /* Blue accent for titles */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h3 {
+    color: #00ADEF;
+    font-size: 1.8em;
+    margin-top: 10px;
+}
+
+/* About Section */
+#about p {
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: #B0B0B0;
+    line-height: 1.8;
+}
+
+/* Job title styling */
+.job-title {
+    font-size: 1.5em; /* Slightly smaller than the name */
+    color: #00ADEF; /* Blue accent color for trust and security */
+    margin-top: 10px; /* Space between name and job title */
+    font-weight: 600; /* Semi-bold to make it stand out but not too heavy */
+    letter-spacing: 1px; /* Adds a slight spacing between letters for clarity */
+    text-transform: uppercase; /* Make it all uppercase for a professional, sharp look */
+    font-family: 'Courier New', Courier, monospace; /* Matching the "hacker" vibe */
+}
+
+.job-title:hover {
+    color: #1DA1F2; /* Slightly lighter blue on hover */
+    text-decoration: none; /* Subtle underline on hover for interactivity */
+}
+
+
+/* Portfolio Section */
+#portfolio .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.portfolio-item {
+    background-color: #1C1C1C;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    transition: transform 0.3s, background-color 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    background-color: #333;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #00ADEF;
+    border-radius: 8px;
+}
+
+.portfolio-item p {
+    color: #B0B0B0;
+    margin-top: 10px;
+}
+
+
+
+/* Projects Section */
+/* Projects Section */
+#projects {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 20px;
+    margin-top: 50px;
+    padding: 20px 0;
+    justify-content: flex-start;
+    scroll-snap-type: x mandatory; /* Enforces snapping for smoother scrolling */
+    max-width: 100%; /* Ensures that the container doesn't overflow the page */
+}
+
+.project {
+    background-color: #1A1A1A;
+    color: #E0E0E0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    flex: 0 0 30%; /* Each project takes up 30% of the container's width */
+    height: 350px; /* Fixed height for uniformity */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the top */
+    overflow: hidden; /* Prevents overflowing text */
+}
+
+/* Image styling */
+.project img {
+    width: 100%; /* Ensure the image takes up full width of the container */
+    height: 200px; /* Fixed height for the image */
+    object-fit: cover; /* Ensures image is not distorted and covers the container */
+    border-radius: 8px;
+    margin-bottom: 15px; /* Adds space between the image and text */
+}
+
+/* Title styling */
+.project h3 {
+    font-size: 1.3em;
+    margin-top: 10px;
+    color: #00ADEF;
+    white-space: nowrap; /* Prevents title from wrapping */
+    overflow: hidden; /* Hides overflowed content */
+    text-overflow: ellipsis; /* Adds "..." if the text overflows */
+}
+
+/* Description styling */
+.project p {
+    color: #B0B0B0;
+    font-size: 1em;
+    margin-top: 10px;
+    white-space: nowrap; /* Prevents description from wrapping */
+    overflow: hidden; /* Hides overflowed content */
+    text-overflow: ellipsis; /* Adds "..." if the text overflows */
+}
+
+/* Hover Effect for Projects */
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 173, 239, 0.2);
+}
+
+.project a {
+    text-decoration: none;
+    color: inherit; /* Ensures that the text color doesn't change */
+}
+
+.project a:hover h3, .project a:hover p {
+    color: #1DA1F2; /* Change color of text on hover */
+}
+
+/* Adding some styles for the scroll behavior */
+#projects::-webkit-scrollbar {
+    height: 8px; /* Height of the scrollbar */
+}
+
+#projects::-webkit-scrollbar-thumb {
+    background-color: #00ADEF; /* Scrollbar color */
+    border-radius: 8px;
+}
+
+#projects::-webkit-scrollbar-track {
+    background: #1A1A1A; /* Track color */
+}
+
+/* Scroll Behavior */
+#projects {
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+}
+
+
+
+/* Contact Button Styling */
+.contact-button {
+    background-color: #00ADEF;
+    color: #121212;
+    padding: 15px 30px;
+    font-size: 0.5em;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #1DA1F2; /* Slightly lighter blue for hover effect */
+}
+
+a {
+    text-decoration: none;
+}
+/* Footer */
+footer {
+    background-color: #1A1A1A;
+    color: #00ADEF;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer .social-links a {
+    color: #00ADEF;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+footer .social-links a:hover {
+    color: #1DA1F2;
+}
